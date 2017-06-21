@@ -13,16 +13,15 @@ return $http.post("http://localhost:8081/backendcruddemo/saveperson",person)
 }
 
 personService.getPersonById=function(id){
-	return $http.get("http://localhost:8081/backendcruddemo/getpersonbyid",+id)
-	}
+return $http.get("http://localhost:8081/backendcruddemo/getpersonbyid/"+id)
+}
 
 personService.updatePerson=function(person){
-	return $http.put("http://localhost:8081/backendcruddemo/updateperson",person)
-	}
+return $http.put("http://localhost:8081/backendcruddemo/updateperson",person)
+}
 
 personService.deletePerson=function(id){
-	return $http['delete']("http://localhost:8081/backendcruddemo/deleteperson",+id)
-	}
-
+return $http['delete']("http://localhost:8081/backendcruddemo/deleteperson/"+id);
+}
 return personService;
 })
